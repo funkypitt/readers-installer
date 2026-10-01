@@ -34,8 +34,9 @@ Changes are in the git history on top of the upstream tag `v1.6.17`.
 
 ## Install
 
-Download the APK for your phone (most phones: `arm64-v8a`) from the
-[latest release](../../releases/latest) and open it. From then on it updates itself.
+Download the APK from the [latest release](../../releases/latest) and open it. From then on it
+updates itself. The release is built for 64-bit ARM (nearly every phone and tablet since 2017);
+`./build.sh` produces the other architectures.
 
 ## Build
 
