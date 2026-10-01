@@ -765,7 +765,7 @@ class AppsPageState extends State<AppsPage> {
     final urls = buf.toString().trimRight();
     unawaited(
       SharePlus.instance.share(
-        ShareParams(text: urls, subject: 'Obtainium - ${tr('appsString')}'),
+        ShareParams(text: urls, subject: '$appDisplayName - ${tr('appsString')}'),
       ),
     );
   }
@@ -774,14 +774,14 @@ class AppsPageState extends State<AppsPage> {
     final buf = StringBuffer();
     for (var a in selectedApps) {
       buf.writeln(
-        'https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/${Uri.encodeComponent(jsonEncode({'id': a.id, 'url': a.url, 'author': a.author, 'name': a.name, 'preferredApkIndex': a.preferredApkIndex, 'additionalSettings': jsonEncode(a.additionalSettings), 'overrideSource': a.overrideSource}))}',
+        'readersinstaller://app/${Uri.encodeComponent(jsonEncode({'id': a.id, 'url': a.url, 'author': a.author, 'name': a.name, 'preferredApkIndex': a.preferredApkIndex, 'additionalSettings': jsonEncode(a.additionalSettings), 'overrideSource': a.overrideSource}))}',
       );
     }
     unawaited(
       SharePlus.instance.share(
         ShareParams(
           text: buf.toString(),
-          subject: 'Obtainium - ${tr('appsString')}',
+          subject: '$appDisplayName - ${tr('appsString')}',
         ),
       ),
     );

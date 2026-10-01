@@ -12,6 +12,7 @@ import 'package:obtainium/providers/settings_provider.dart';
 import 'package:obtainium/providers/source_provider.dart';
 import 'package:obtainium/utils/native_features.dart';
 import 'package:obtainium/pages/home.dart';
+import 'package:obtainium/readers_catalog.dart';
 import 'package:obtainium/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:dynamic_color/dynamic_color.dart';
@@ -253,17 +254,13 @@ class _ObtainiumState extends State<Obtainium> {
                     App(
                       id: obtainiumId,
                       url: obtainiumUrl,
-                      author: 'ImranR98',
-                      name: 'Obtainium',
+                      author: 'funkypitt',
+                      name: appDisplayName,
                       installedVersion: value!.versionName,
                       latestVersion: value.versionName!,
                       apkUrls: [],
                       preferredApkIndex: 0,
-                      additionalSettings: {
-                        'versionDetection': true,
-                        'apkFilterRegEx': 'fdroid',
-                        'invertAPKFilter': true,
-                      },
+                      additionalSettings: {'versionDetection': true},
                       lastUpdateCheck: null,
                       pinned: false,
                     ),
@@ -311,6 +308,7 @@ class _ObtainiumState extends State<Obtainium> {
 
       unawaited(_syncWorkManager());
       _handleFirstRun(settingsProvider, appsProvider, context);
+      unawaited(syncReadersCatalog(appsProvider));
 
       if (!_launchByNotifChecked) {
         _launchByNotifChecked = true;
@@ -358,7 +356,7 @@ class _ObtainiumState extends State<Obtainium> {
           final variant = switch (schemeMode) {
             ColourSchemeMode.vibrant => DynamicSchemeVariant.vibrant,
             ColourSchemeMode.expressive => DynamicSchemeVariant.expressive,
-            _ => DynamicSchemeVariant.tonalSpot,
+            _ => DynamicSchemeVariant.monochrome,
           };
           lightColorScheme = ColorScheme.fromSeed(
             seedColor: themeColor,
@@ -382,7 +380,7 @@ class _ObtainiumState extends State<Obtainium> {
         }
 
         return MaterialApp(
-          title: 'Obtainium',
+          title: appDisplayName,
           navigatorKey: appNavigatorKey,
           localizationsDelegates: [
             ...context.localizationDelegates,

@@ -351,6 +351,14 @@ class _SettingsPageState extends State<SettingsPage> {
             ),
             _settingsRow(
               context,
+              icon: Icons.call_split,
+              title: 'Based on Obtainium (GPL-3.0)',
+              trailingIcon: Icons.open_in_new,
+              trailingIconSize: 20,
+              onTap: () => _openExternalUrl(context, upstreamUrl),
+            ),
+            _settingsRow(
+              context,
               icon: Icons.help_outline_rounded,
               title: tr('wiki'),
               trailingIcon: Icons.open_in_new,

@@ -332,7 +332,7 @@ class MainActivity : FlutterActivity() {
                 val url = match.value.trimEnd('.', ',', ';', '!', '?', ')') // Trim potential trailing punctuation
                 intent.apply { // "Redirect" the intent
                     action = Intent.ACTION_VIEW
-                    data = Uri.parse("obtainium://add/${Uri.encode(url)}")
+                    data = Uri.parse("readersinstaller://add/${Uri.encode(url)}")
                 }
             } else {
                 Toast.makeText(this, "No URL found in shared text", Toast.LENGTH_SHORT).show()

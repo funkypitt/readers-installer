@@ -1,0 +1,94 @@
+{
+ "apps": [
+  {
+   "id": "com.freedomfighter.readerslauncher",
+   "url": "https://github.com/funkypitt/readers-launcher",
+   "author": "funkypitt",
+   "name": "Reader's Launcher"
+  },
+  {
+   "id": "com.freedomfighter.readerscalendar",
+   "url": "https://github.com/funkypitt/readers-calendar",
+   "author": "funkypitt",
+   "name": "Reader's Calendar"
+  },
+  {
+   "id": "com.freedomfighter.readerstasks",
+   "url": "https://github.com/funkypitt/readers-tasks-android",
+   "author": "funkypitt",
+   "name": "Reader's Tasks"
+  },
+  {
+   "id": "com.freedomfighter.readersnotes",
+   "url": "https://github.com/funkypitt/readers-notes",
+   "author": "funkypitt",
+   "name": "Reader's Notes"
+  },
+  {
+   "id": "com.freedomfighter.readersbooks",
+   "url": "https://github.com/funkypitt/readers-books",
+   "author": "funkypitt",
+   "name": "Reader's Books"
+  },
+  {
+   "id": "com.freedomfighter.readersbookshop",
+   "url": "https://github.com/funkypitt/readers-bookshop",
+   "author": "funkypitt",
+   "name": "Reader's Bookshop"
+  },
+  {
+   "id": "com.freedomfighter.readersrecorder",
+   "url": "https://github.com/funkypitt/readers-recorder",
+   "author": "funkypitt",
+   "name": "Reader's Recorder"
+  },
+  {
+   "id": "com.freedomfighter.readerspodcasts",
+   "url": "https://github.com/funkypitt/readers-podcasts",
+   "author": "funkypitt",
+   "name": "Reader's Podcasts"
+  },
+  {
+   "id": "com.freedomfighter.readersaudio",
+   "url": "https://github.com/funkypitt/readers-audio",
+   "author": "funkypitt",
+   "name": "Reader's Audio Player"
+  },
+  {
+   "id": "com.freedomfighter.readersmindful",
+   "url": "https://github.com/funkypitt/readers-mindful",
+   "author": "funkypitt",
+   "name": "Reader's Mindful Tool"
+  },
+  {
+   "id": "com.freedomfighter.readersfoodlog",
+   "url": "https://github.com/funkypitt/readers-foodlog",
+   "author": "funkypitt",
+   "name": "Reader's Food Log"
+  },
+  {
+   "id": "com.freedomfighter.readersscanner",
+   "url": "https://github.com/funkypitt/readers-scanner",
+   "author": "funkypitt",
+   "name": "Reader's Scanner"
+  },
+  {
+   "id": "com.freedomfighter.readersfeeds",
+   "url": "https://github.com/funkypitt/readers-feeds",
+   "author": "funkypitt",
+   "name": "Reader's Feeds"
+  },
+  {
+   "id": "com.parentcontrol.socialblocker.detox",
+   "url": "https://github.com/funkypitt/SocialBlocker-Detox",
+   "author": "funkypitt",
+   "name": "Reader's Detox"
+  },
+  {
+   "id": "com.freedomfighter.readersnight",
+   "url": "https://github.com/funkypitt/readers-night",
+   "author": "funkypitt",
+   "name": "Reader's Night Filter"
+  }
+ ]
+}

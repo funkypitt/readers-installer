@@ -18,10 +18,14 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_storage/shared_storage.dart' as saf;
 
-const String obtainiumTempId = 'imranr98_obtainium_github.com';
-const String obtainiumId = 'dev.imranr.obtainium';
-const String obtainiumUrl = 'https://github.com/ImranR98/Obtainium';
-const Color obtainiumThemeColor = Color(0xFF6438B5);
+const String obtainiumTempId = 'funkypitt_readers-installer_github.com';
+const String obtainiumId = 'com.freedomfighter.readersinstaller';
+const String obtainiumUrl = 'https://github.com/funkypitt/readers-installer';
+
+/// The project this app is a modified version of (GPL-3.0).
+const String upstreamUrl = 'https://github.com/ImranR98/Obtainium';
+const String appDisplayName = "Reader's Installer and Updater";
+const Color obtainiumThemeColor = Color(0xFF808080);
 
 Locale? tryParseLocale(String? localeString) {
   if (localeString == null) return null;
@@ -231,7 +235,7 @@ class SettingsProvider with ChangeNotifier {
   }
 
   bool get useBlackTheme {
-    return _getBool('useBlackTheme') ?? false;
+    return _getBool('useBlackTheme') ?? true;
   }
 
   set useBlackTheme(bool useBlackTheme) {

@@ -108,36 +108,16 @@ class _HomePageState extends State<HomePage> {
           children: [
             Text(tr('documentationLinksNote')),
             const LinkText(
-              text: 'https://github.com/ImranR98/Obtainium/blob/main/README.md',
-              url: 'https://github.com/ImranR98/Obtainium/blob/main/README.md',
+              text: '$obtainiumUrl#readme',
+              url: '$obtainiumUrl#readme',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),
       );
     }
-    if (!mounted) return;
-    if (!sp.googleVerificationWarningShown) {
-      await _showAcknowledgedDialog(
-        isAcknowledged: () => sp.googleVerificationWarningShown,
-        markAcknowledged: () => sp.googleVerificationWarningShown = true,
-        title: Text(tr('note')),
-        scrollable: true,
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          spacing: 20,
-          children: [
-            Text(tr('googleVerificationWarningP1')),
-            LinkText(
-              text: tr('googleVerificationWarningP2'),
-              url: 'https://keepandroidopen.org/',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Text(tr('googleVerificationWarningP3')),
-          ],
-        ),
-      );
-    }
+    // Obtainium's note on Google's developer verification is its authors'
+    // position, not this fork's: the Reader's apps are registered.
   }
 
   /// Shows a single-OK dialog and marks it as acknowledged even when it is
