@@ -5,6 +5,12 @@
 // project's main branch (read at start, so an app published later appears
 // without waiting for a new version of the installer). Each app is offered
 // once: one the user removed from the list is not added again.
+//
+// The catalogue points at the personal F-Droid repository (one index file on
+// GitHub Pages) rather than at each app's GitHub releases: GitHub's API allows
+// 60 anonymous requests an hour per address, which sixteen apps use up in one
+// sitting ("too many requests"). Entries that version 1.0.0 created on GitHub
+// are moved to the repository the first time this version starts.
 
 import 'dart:async';
 import 'dart:convert';
@@ -18,6 +24,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 const String readersCatalogUrl =
     'https://raw.githubusercontent.com/funkypitt/readers-installer/main/assets/catalog.json';
 const String _offeredKey = 'readersCatalogOffered';
+const String _formerSourcePrefix = 'https://github.com/funkypitt/';
 
 /// Adds the Reader's apps that were never offered on this device to the list
 /// of tracked apps, then looks up their latest versions.
@@ -47,9 +54,13 @@ Future<void> _merge(AppsProvider apps, String json) async {
   final entries = ((jsonDecode(json) as Map<String, dynamic>)['apps'] as List)
       .cast<Map<String, dynamic>>();
   final fresh = entries
-      .where(
-        (e) => !offered.contains(e['id']) && !apps.apps.containsKey(e['id']),
-      )
+      .where((e) {
+        final existing = apps.apps[e['id']];
+        if (existing == null) return !offered.contains(e['id']);
+        // tracked on GitHub by version 1.0.0: move it to the catalogue's source
+        return existing.app.url != e['url'] &&
+            existing.app.url.startsWith(_formerSourcePrefix);
+      })
       .toList();
   if (fresh.isNotEmpty) {
     await apps.import(jsonEncode(<String, dynamic>{'apps': fresh}));

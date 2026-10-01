@@ -1,94 +1,132 @@
 {
  "apps": [
   {
-   "id": "com.freedomfighter.readerslauncher",
-   "url": "https://github.com/funkypitt/readers-launcher",
+   "id": "com.freedomfighter.readersinstaller",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersinstaller",
    "author": "funkypitt",
-   "name": "Reader's Launcher"
+   "name": "Reader's Installer and Updater",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersinstaller\"}"
+  },
+  {
+   "id": "com.freedomfighter.readerslauncher",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readerslauncher",
+   "author": "funkypitt",
+   "name": "Reader's Launcher",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readerslauncher\"}"
   },
   {
    "id": "com.freedomfighter.readerscalendar",
-   "url": "https://github.com/funkypitt/readers-calendar",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readerscalendar",
    "author": "funkypitt",
-   "name": "Reader's Calendar"
+   "name": "Reader's Calendar",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readerscalendar\"}"
   },
   {
    "id": "com.freedomfighter.readerstasks",
-   "url": "https://github.com/funkypitt/readers-tasks-android",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readerstasks",
    "author": "funkypitt",
-   "name": "Reader's Tasks"
+   "name": "Reader's Tasks",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readerstasks\"}"
   },
   {
    "id": "com.freedomfighter.readersnotes",
-   "url": "https://github.com/funkypitt/readers-notes",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersnotes",
    "author": "funkypitt",
-   "name": "Reader's Notes"
+   "name": "Reader's Notes",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersnotes\"}"
   },
   {
    "id": "com.freedomfighter.readersbooks",
-   "url": "https://github.com/funkypitt/readers-books",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersbooks",
    "author": "funkypitt",
-   "name": "Reader's Books"
+   "name": "Reader's Books",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersbooks\"}"
   },
   {
    "id": "com.freedomfighter.readersbookshop",
-   "url": "https://github.com/funkypitt/readers-bookshop",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersbookshop",
    "author": "funkypitt",
-   "name": "Reader's Bookshop"
+   "name": "Reader's Bookshop",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersbookshop\"}"
   },
   {
    "id": "com.freedomfighter.readersrecorder",
-   "url": "https://github.com/funkypitt/readers-recorder",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersrecorder",
    "author": "funkypitt",
-   "name": "Reader's Recorder"
+   "name": "Reader's Recorder",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersrecorder\"}"
   },
   {
    "id": "com.freedomfighter.readerspodcasts",
-   "url": "https://github.com/funkypitt/readers-podcasts",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readerspodcasts",
    "author": "funkypitt",
-   "name": "Reader's Podcasts"
+   "name": "Reader's Podcasts",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readerspodcasts\"}"
   },
   {
    "id": "com.freedomfighter.readersaudio",
-   "url": "https://github.com/funkypitt/readers-audio",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersaudio",
    "author": "funkypitt",
-   "name": "Reader's Audio Player"
+   "name": "Reader's Audio Player",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersaudio\"}"
   },
   {
    "id": "com.freedomfighter.readersmindful",
-   "url": "https://github.com/funkypitt/readers-mindful",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersmindful",
    "author": "funkypitt",
-   "name": "Reader's Mindful Tool"
+   "name": "Reader's Mindful Tool",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersmindful\"}"
   },
   {
    "id": "com.freedomfighter.readersfoodlog",
-   "url": "https://github.com/funkypitt/readers-foodlog",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersfoodlog",
    "author": "funkypitt",
-   "name": "Reader's Food Log"
+   "name": "Reader's Food Log",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersfoodlog\"}"
   },
   {
    "id": "com.freedomfighter.readersscanner",
-   "url": "https://github.com/funkypitt/readers-scanner",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersscanner",
    "author": "funkypitt",
-   "name": "Reader's Scanner"
+   "name": "Reader's Scanner",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersscanner\"}"
   },
   {
    "id": "com.freedomfighter.readersfeeds",
-   "url": "https://github.com/funkypitt/readers-feeds",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersfeeds",
    "author": "funkypitt",
-   "name": "Reader's Feeds"
+   "name": "Reader's Feeds",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersfeeds\"}"
   },
   {
    "id": "com.parentcontrol.socialblocker.detox",
-   "url": "https://github.com/funkypitt/SocialBlocker-Detox",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.parentcontrol.socialblocker.detox",
    "author": "funkypitt",
-   "name": "Reader's Detox"
+   "name": "Reader's Detox",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.parentcontrol.socialblocker.detox\"}"
   },
   {
    "id": "com.freedomfighter.readersnight",
-   "url": "https://github.com/funkypitt/readers-night",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersnight",
    "author": "funkypitt",
-   "name": "Reader's Night Filter"
+   "name": "Reader's Night Filter",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersnight\"}"
   }
  ]
 }

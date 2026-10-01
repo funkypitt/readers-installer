@@ -245,37 +245,8 @@ class _ObtainiumState extends State<Obtainium> {
       if (!settings.isTV) {
         unawaited(Permission.notification.request());
       }
-      if (!isFdroidBuild) {
-        getInstalledInfo(obtainiumId)
-            .then((value) {
-              if (value?.versionName != null) {
-                unawaited(
-                  apps.saveApps([
-                    App(
-                      id: obtainiumId,
-                      url: obtainiumUrl,
-                      author: 'funkypitt',
-                      name: appDisplayName,
-                      installedVersion: value!.versionName,
-                      latestVersion: value.versionName!,
-                      apkUrls: [],
-                      preferredApkIndex: 0,
-                      additionalSettings: {'versionDetection': true},
-                      lastUpdateCheck: null,
-                      pinned: false,
-                    ),
-                  ], onlyIfExists: false),
-                );
-              }
-            })
-            .catchError((err, stack) {
-              AppLogger.error(
-                err,
-                stackTrace: stack,
-                message: 'Failed to add Obtainium on first run',
-              );
-            });
-      }
+      // The installer's own entry is the first line of the Reader's catalogue
+      // (lib/readers_catalog.dart).
     }
     final currentLang = context.locale.languageCode;
     final deviceLang = context.deviceLocale.languageCode;

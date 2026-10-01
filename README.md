@@ -1,7 +1,7 @@
 # Reader's Installer and Updater
 
-Installs the [Reader's](https://gallaz.ch/eink/#readers) apps and keeps them up to date, straight
-from their GitHub releases. Open it once: the whole family is in the list, each app one tap away
+Installs the [Reader's](https://gallaz.ch/eink/#readers) apps and keeps them up to date, from the
+author's [F-Droid repository](https://gallaz.ch/eink/#fdroid) (the same files as their GitHub releases). Open it once: the whole family is in the list, each app one tap away
 from being installed; after that the updates come by themselves, including the installer's own.
 
 **This is a modified version of [Obtainium](https://github.com/ImranR98/Obtainium)** by Imran
@@ -13,6 +13,9 @@ Obtainium and is not endorsed by its authors. Modified from Obtainium v1.6.17 on
 * The list of Reader's apps ships with the installer and is read again from this repository at
   each start (`assets/catalog.json`), so an app published later appears by itself. An app you
   remove from the list is not added back.
+* The Reader's apps and the installer itself are read from one small index file of the F-Droid
+  repository, not from GitHub's API, whose anonymous limit of 60 requests an hour a family of
+  sixteen apps exhausts at once ("too many requests").
 * Everything Obtainium does is still there: any other app can be added from its GitHub, GitLab,
   Codeberg, F-Droid… page, with the same options.
 * Updates in the background; silent on Android 12 and later for the apps this installer installed
@@ -24,7 +27,7 @@ Obtainium and is not endorsed by its authors. Modified from Obtainium v1.6.17 on
 
 * Name, icon, application id (`com.freedomfighter.readersinstaller`) and link scheme
   (`readersinstaller://` instead of `obtainium://`), so both apps can live on the same phone.
-* The app tracks its own releases in this repository instead of Obtainium's.
+* The app tracks its own releases (through the F-Droid repository) instead of Obtainium's.
 * `lib/readers_catalog.dart` and `assets/catalog.json`: the Reader's apps offered at first start.
 * Black and white by default (monochrome colour scheme, black background).
 * The app's name in the translated texts; Obtainium's logo, screenshots, store texts and
