@@ -121,6 +121,14 @@
    "additionalSettings": "{\"appIdOrName\": \"com.parentcontrol.socialblocker.detox\"}"
   },
   {
+   "id": "com.freedomfighter.readersfiles",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersfiles",
+   "author": "funkypitt",
+   "name": "Reader's Files",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersfiles\"}"
+  },
+  {
    "id": "com.freedomfighter.readersnight",
    "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersnight",
    "author": "funkypitt",
