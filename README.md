@@ -51,7 +51,26 @@ git submodule update --init          # the pinned Flutter SDK
 ./build.sh                           # build/app/outputs/flutter-apk/app-<abi>-normal-release.apk (unsigned)
 ```
 
-JDK 21 and the Android SDK are needed. `tool/make_catalog.py` rebuilds `assets/catalog.json`.
+JDK 21 and the Android SDK are needed.
+
+## Adding an app to the list
+
+The rule: **every app of the list is read from the F-Droid repository, never from its GitHub
+releases.** GitHub's API allows 60 anonymous requests an hour per address, each app costs at
+least one at every check, and once the limit is reached every app shows "too many requests" for
+up to an hour. A personal access token lifts the limit, but only for a user who has a GitHub
+account and enters a token in the settings, which the list cannot assume. The repository is one
+index file with no such limit.
+
+1. Publish the app in the F-Droid repository and wait until it is online.
+2. A Reader's app: add its card to the Reader's section of the apps page. Any other app: add it
+   to `OTHERS` in `tool/make_catalog.py`.
+3. Run `tool/make_catalog.py`, commit `assets/catalog.json`, push. Installers already on phones
+   read the new list at their next start (GitHub serves the previous one for up to five minutes).
+
+The script refuses an app that is missing from the repository. The only exception is an app that
+cannot be in the repository because of its size (Clavier Plume, 226 MB): it carries a `github`
+key in `OTHERS`, and the script allows two such apps at most.
 
 ## Credits
 

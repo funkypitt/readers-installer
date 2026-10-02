@@ -3,15 +3,24 @@
 
     tool/make_catalog.py [path/to/gallaz-ch-eink/index.html]
 
-Each app card of that section carries an import link with the app's id and name;
-the catalogue lists them, the installer itself first, all read from the personal
-F-Droid repository: one small index file on GitHub Pages instead of GitHub's
-API, whose anonymous limit (60 requests an hour per address) a family of
-sixteen apps exhausts in one sitting.
+THE RULE: every app of the catalogue is read from the personal F-Droid
+repository (REPO below), never from its GitHub releases. The repository is one
+small index file on GitHub Pages, with no limit; GitHub's API allows 60
+anonymous requests an hour per address (shared by a whole household or mobile
+carrier), each app costs at least one request at every check, and once the
+limit is reached every app shows "too many requests" for up to an hour. A
+personal access token lifts the limit, but only for a user who has a GitHub
+account and pastes a token in the settings, which the catalogue cannot assume.
+Version 1.0.0 pointed sixteen apps at GitHub and failed that way on the first
+phone.
 
-The author's other apps (OTHERS below) follow the family. One with a "github" is
-not in the F-Droid repository and is read from its GitHub releases; keep those
-few, each costs a request to GitHub's API at every check.
+So, to add an app: publish it in the F-Droid repository first, then list it
+here. The Reader's apps come from the cards of the apps page (the GitHub link a
+card carries is ignored, only its id and name are used); the author's other
+apps are in OTHERS below. The only exception is an app that cannot be in the
+repository (too large for GitHub Pages): give it a "github" key. This script
+refuses an app that is missing from the repository, a "github" app that is in
+it, and more than MAX_GITHUB exceptions.
 """
 import json
 import os
@@ -24,10 +33,11 @@ SITE = "https://funkypitt.github.io/gallaz-ch-eink/index.html"
 REPO = "https://funkypitt.github.io/fdroid-repo/repo"
 SELF_ID = "com.freedomfighter.readersinstaller"
 SELF_NAME = "Reader's Installer and Updater"
+MAX_GITHUB = 2
 OTHERS = [
     {"id": "com.freedomfighter.magazinereader", "name": "ePub Magazine Reader"},
     {"id": "ch.littre.littre_app", "name": "Le dictionnaire Littré"},
-    # too large for the F-Droid repository
+    # 226 MB: too large for the F-Droid repository, the one exception to the rule
     {"id": "ch.plume.clavier", "name": "Clavier Plume", "github": "funkypitt/clavier-plume"},
     {"id": "com.local2p.games", "name": "Funky's 2P Games"},
 ]
@@ -55,12 +65,22 @@ def main():
     section = html[start:html.index("<section", start + 10)]
     cards = [json.loads(urllib.parse.unquote(m.group(1))) for m in re.finditer(r'obtainium://app/([^"]+)"', section)]
     cards.insert(0, {"id": SELF_ID, "name": SELF_NAME})
-    apps = [entry(c) for c in cards + OTHERS]
+    cards = [{"id": c["id"], "name": c["name"]} for c in cards] + OTHERS
+    index = json.load(urllib.request.urlopen(f"{REPO}/index-v2.json", timeout=30))
+    published = set(index["packages"])
+    exceptions = [c for c in cards if "github" in c]
+    problems = [f"{c['name']} ({c['id']}) is not in the F-Droid repository: publish it there first" for c in cards if "github" not in c and c["id"] not in published]
+    problems += [f"{c['name']} ({c['id']}) is in the F-Droid repository: remove its \"github\" key" for c in exceptions if c["id"] in published]
+    if len(exceptions) > MAX_GITHUB:
+        problems.append(f"{len(exceptions)} apps read from GitHub, at most {MAX_GITHUB} (60 requests an hour per address)")
+    if problems:
+        sys.exit("Catalogue not written:\n  " + "\n  ".join(problems))
+    apps = [entry(c) for c in cards]
     out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "catalog.json")
     with open(out, "w", encoding="utf-8") as f:
         json.dump({"apps": apps}, f, indent=1, ensure_ascii=False)
         f.write("\n")
-    print(f"{len(apps)} apps → {out}")
+    print(f"{len(apps)} apps → {out} ({len(exceptions)} read from GitHub: {', '.join(c['name'] for c in exceptions) or 'none'})")
 
 
 if __name__ == "__main__":
