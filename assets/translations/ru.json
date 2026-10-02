@@ -524,5 +524,7 @@
     "yes": "Да",
     "yesMarkUpdated": "Да, отметить как обновлённое",
     "youPickedTrackOnly": "Выбрана настройка «только для отслеживания»",
-    "zippedApkFilterRegEx": "Фильтр APK внутри ZIP"
+    "zippedApkFilterRegEx": "Фильтр APK внутри ZIP",
+    "alsoOnDesktop": "Есть и для компьютера:",
+    "alsoOnDesktopFor": "Есть и для компьютера ({}):"
 }

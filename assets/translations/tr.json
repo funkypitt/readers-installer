@@ -512,5 +512,7 @@
     "yes": "Evet",
     "yesMarkUpdated": "Evet, güncel olarak işaretle",
     "youPickedTrackOnly": "'Sadece takip et' seçeneğini seçtiniz.",
-    "zippedApkFilterRegEx": "ZIP içindeki APK'ları filtrele"
+    "zippedApkFilterRegEx": "ZIP içindeki APK'ları filtrele",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

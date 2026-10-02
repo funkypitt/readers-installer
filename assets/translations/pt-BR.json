@@ -512,5 +512,7 @@
     "yes": "Sim",
     "yesMarkUpdated": "Sim, marcar como atualizado",
     "youPickedTrackOnly": "Você selecionou a opção de somente rastreamento.",
-    "zippedApkFilterRegEx": "Filtrar APKs dentro do ZIP"
+    "zippedApkFilterRegEx": "Filtrar APKs dentro do ZIP",
+    "alsoOnDesktop": "Também para o computador:",
+    "alsoOnDesktopFor": "Também para o computador ({}):"
 }

@@ -166,5 +166,27 @@
    "overrideSource": "FDroidRepo",
    "additionalSettings": "{\"appIdOrName\": \"com.local2p.games\"}"
   }
- ]
+ ],
+ "desktop": {
+  "com.freedomfighter.readerscalendar": {
+   "url": "https://github.com/funkypitt/readers-calendar-desktop",
+   "systems": "Windows, macOS, Linux"
+  },
+  "com.freedomfighter.readerstasks": {
+   "url": "https://github.com/funkypitt/readers-tasks",
+   "systems": "Windows, macOS, Linux"
+  },
+  "com.freedomfighter.readersnotes": {
+   "url": "https://github.com/funkypitt/readers-notes-desktop",
+   "systems": "Windows, macOS, Linux"
+  },
+  "com.freedomfighter.readerspodcasts": {
+   "url": "https://github.com/funkypitt/readers-podcasts-desktop",
+   "systems": "Linux"
+  },
+  "com.freedomfighter.readersscanner": {
+   "url": "https://github.com/funkypitt/readers-scanner-desktop",
+   "systems": "Windows, macOS, Linux"
+  }
+ }
 }

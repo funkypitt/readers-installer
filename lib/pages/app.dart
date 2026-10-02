@@ -11,6 +11,7 @@ import 'package:obtainium/components/ui_widgets.dart';
 import 'package:obtainium/components/app_detail_widgets.dart';
 import 'package:obtainium/theme.dart';
 import 'package:obtainium/providers/apps_provider.dart';
+import 'package:obtainium/readers_catalog.dart';
 import 'package:obtainium/utils/format_utils.dart';
 import 'package:obtainium/providers/notifications_provider.dart';
 import 'package:obtainium/core/logging/app_logger.dart';
@@ -1064,6 +1065,48 @@ class _AppPageState extends State<AppPage> {
     ];
   }
 
+  /// The desktop version of the app, when the Reader's catalogue names one:
+  /// a link to its GitHub page, opened in the browser.
+  Widget _buildDesktopSection(AppInMemory? app) {
+    return ValueListenableBuilder<Map<String, DesktopVersion>>(
+      valueListenable: readersDesktop,
+      builder: (context, desktop, _) {
+        final version = desktop[app?.app.id];
+        if (version == null) {
+          return const SliverToBoxAdapter(child: SizedBox.shrink());
+        }
+        final theme = Theme.of(context);
+        return SliverMainAxisGroup(
+          slivers: [
+            const SliverToBoxAdapter(
+              child: SizedBox(height: AppSpacings.sectionGap),
+            ),
+            _buildSection(
+              true,
+              true,
+              children: [
+                Text(
+                  version.systems.isEmpty
+                      ? tr('alsoOnDesktop')
+                      : tr('alsoOnDesktopFor', args: [version.systems]),
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                LinkText(
+                  text: version.url,
+                  url: version.url,
+                  style: const TextStyle(fontStyle: FontStyle.italic),
+                ),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   List<Widget> _buildSourceInfoSections(
     AppInMemory? app,
     AppsProvider appsProvider,
@@ -1372,6 +1415,7 @@ class _AppPageState extends State<AppPage> {
                           certs,
                           hasAssets,
                         ),
+                        _buildDesktopSection(app),
                         const SliverToBoxAdapter(
                           child: SizedBox(height: AppSpacings.sectionGap),
                         ),

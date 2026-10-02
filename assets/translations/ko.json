@@ -512,5 +512,7 @@
     "yes": "예",
     "yesMarkUpdated": "예, 업데이트됨으로 표시",
     "youPickedTrackOnly": "당신은 '추적 전용' 옵션을 선택했습니다.",
-    "zippedApkFilterRegEx": "ZIP 내 APK 필터링"
+    "zippedApkFilterRegEx": "ZIP 내 APK 필터링",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

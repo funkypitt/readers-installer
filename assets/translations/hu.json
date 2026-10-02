@@ -511,5 +511,7 @@
     "yes": "Igen",
     "yesMarkUpdated": "Igen, megjelölés frissítettként",
     "youPickedTrackOnly": "„Csak nyomon követés” beállítást választotta.",
-    "zippedApkFilterRegEx": "APK-fájlok szűrése a ZIP-fájlon belül"
+    "zippedApkFilterRegEx": "APK-fájlok szűrése a ZIP-fájlon belül",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

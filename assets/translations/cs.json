@@ -525,5 +525,7 @@
     "yes": "Ano",
     "yesMarkUpdated": "Ano, označit jako aktualizované",
     "youPickedTrackOnly": "Vybrali jste možnost „pouze sledovat“.",
-    "zippedApkFilterRegEx": "Filtrování souborů APK uvnitř ZIP"
+    "zippedApkFilterRegEx": "Filtrování souborů APK uvnitř ZIP",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

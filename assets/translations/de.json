@@ -512,5 +512,7 @@
     "yes": "Ja",
     "yesMarkUpdated": "Ja, als aktualisiert markieren",
     "youPickedTrackOnly": "Sie haben die Option „Nur nachverfolgen“ gewählt.",
-    "zippedApkFilterRegEx": "APKs in ZIP filtern"
+    "zippedApkFilterRegEx": "APKs in ZIP filtern",
+    "alsoOnDesktop": "Auch für den Computer:",
+    "alsoOnDesktopFor": "Auch für den Computer ({}):"
 }

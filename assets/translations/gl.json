@@ -512,5 +512,7 @@
     "yes": "Si",
     "yesMarkUpdated": "Si, marcar como actualizada",
     "youPickedTrackOnly": "Seleccionaches a opción 'só-seguimento'.",
-    "zippedApkFilterRegEx": "Filtrar APKs dentro do ZIP"
+    "zippedApkFilterRegEx": "Filtrar APKs dentro do ZIP",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

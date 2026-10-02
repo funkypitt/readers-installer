@@ -512,5 +512,7 @@
     "yes": "Jes",
     "yesMarkUpdated": "Jes, marki kiel ĝisdata",
     "youPickedTrackOnly": "Vi selektis la opcion 'Nur sekvitaj'.",
-    "zippedApkFilterRegEx": "Filter APKs inside ZIP"
+    "zippedApkFilterRegEx": "Filter APKs inside ZIP",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

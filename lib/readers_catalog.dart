@@ -11,10 +11,15 @@
 // 60 anonymous requests an hour per address, which sixteen apps use up in one
 // sitting ("too many requests"). Entries that version 1.0.0 created on GitHub
 // are moved to the repository the first time this version starts.
+//
+// The catalogue also names the desktop version of an app, when there is one
+// ("desktop": application id → GitHub page and systems); the app's page shows
+// it as a link opened in the browser.
 
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show ValueNotifier;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:obtainium/core/logging/app_logger.dart';
@@ -26,12 +31,45 @@ const String readersCatalogUrl =
 const String _offeredKey = 'readersCatalogOffered';
 const String _formerSourcePrefix = 'https://github.com/funkypitt/';
 
+/// The desktop version of an app of the catalogue.
+class DesktopVersion {
+  final String url;
+  final String systems;
+  const DesktopVersion(this.url, this.systems);
+}
+
+/// Desktop versions by application id, filled from the catalogue at start.
+final ValueNotifier<Map<String, DesktopVersion>> readersDesktop = ValueNotifier(
+  const {},
+);
+
+void _readDesktop(String json) {
+  try {
+    final desktop = (jsonDecode(json) as Map<String, dynamic>)['desktop'];
+    if (desktop is! Map) return;
+    final found = <String, DesktopVersion>{};
+    desktop.forEach((id, value) {
+      if (id is! String || value is! Map) return;
+      final url = value['url'];
+      final systems = value['systems'];
+      if (url is String && url.startsWith('https://')) {
+        found[id] = DesktopVersion(url, systems is String ? systems : '');
+      }
+    });
+    readersDesktop.value = found;
+  } catch (e) {
+    AppLogger.info('Catalogue: desktop versions not read ($e)');
+  }
+}
+
 /// Adds the Reader's apps that were never offered on this device to the list
 /// of tracked apps, then looks up their latest versions.
 Future<void> syncReadersCatalog(AppsProvider apps) async {
   try {
+    final bundled = await rootBundle.loadString('assets/catalog.json');
+    _readDesktop(bundled);
     await apps.waitForAppsToLoad();
-    await _merge(apps, await rootBundle.loadString('assets/catalog.json'));
+    await _merge(apps, bundled);
   } catch (e, stack) {
     AppLogger.error(e, stackTrace: stack, message: 'Catalogue: bundled list');
   }
@@ -40,7 +78,9 @@ Future<void> syncReadersCatalog(AppsProvider apps) async {
         .get(Uri.parse(readersCatalogUrl))
         .timeout(const Duration(seconds: 15));
     if (response.statusCode == 200) {
-      await _merge(apps, utf8.decode(response.bodyBytes));
+      final online = utf8.decode(response.bodyBytes);
+      _readDesktop(online);
+      await _merge(apps, online);
     }
   } catch (e) {
     // Offline, or GitHub unreachable: the bundled list has been applied.

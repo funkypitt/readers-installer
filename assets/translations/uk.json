@@ -512,5 +512,7 @@
     "yes": "Так",
     "yesMarkUpdated": "Так, позначити як оновлене",
     "youPickedTrackOnly": "Ви вибрали опцію лише для відстежування.",
-    "zippedApkFilterRegEx": "Фільтруйте APK-файли всередині ZIP"
+    "zippedApkFilterRegEx": "Фільтруйте APK-файли всередині ZIP",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

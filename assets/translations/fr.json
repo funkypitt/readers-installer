@@ -512,5 +512,7 @@
     "yes": "Oui",
     "yesMarkUpdated": "Oui, marquer comme étant à jour",
     "youPickedTrackOnly": "Vous avez sélectionné l'option 'suivi uniquement'.",
-    "zippedApkFilterRegEx": "Filtrer les APK dans un fichier ZIP"
+    "zippedApkFilterRegEx": "Filtrer les APK dans un fichier ZIP",
+    "alsoOnDesktop": "Existe aussi pour l'ordinateur :",
+    "alsoOnDesktopFor": "Existe aussi pour l'ordinateur ({}) :"
 }

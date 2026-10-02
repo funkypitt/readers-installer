@@ -512,5 +512,7 @@
     "yes": "അതെ",
     "yesMarkUpdated": "അതെ, അപ്‌ഡേറ്റ് ചെയ്തതായി അടയാളപ്പെടുത്തുക",
     "youPickedTrackOnly": "നിങ്ങൾ 'ട്രാക്ക്-മാത്രം' ഓപ്ഷൻ തിരഞ്ഞെടുത്തു.",
-    "zippedApkFilterRegEx": "Filter APKs inside ZIP"
+    "zippedApkFilterRegEx": "Filter APKs inside ZIP",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

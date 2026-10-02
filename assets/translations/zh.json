@@ -512,5 +512,7 @@
     "yes": "是",
     "yesMarkUpdated": "是，标记为已更新",
     "youPickedTrackOnly": "您选择了“仅追踪”。",
-    "zippedApkFilterRegEx": "过滤 ZIP 内的 APK"
+    "zippedApkFilterRegEx": "过滤 ZIP 内的 APK",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

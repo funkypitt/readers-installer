@@ -512,5 +512,7 @@
     "yes": "Da",
     "yesMarkUpdated": "Da, označi kao ažurirano",
     "youPickedTrackOnly": "Odabrali ste opciju „Samo za praćenje”.",
-    "zippedApkFilterRegEx": "Filtriraj APK-ove unutar ZIP datoteka"
+    "zippedApkFilterRegEx": "Filtriraj APK-ove unutar ZIP datoteka",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

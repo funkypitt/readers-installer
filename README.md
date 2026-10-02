@@ -19,6 +19,8 @@ Obtainium and is not endorsed by its authors. Modified from Obtainium v1.6.17 on
 * The Reader's apps and the installer itself are read from one small index file of the F-Droid
   repository, not from GitHub's API, whose anonymous limit of 60 requests an hour a family of
   sixteen apps exhausts at once ("too many requests").
+* When an app also exists for the desktop (Calendar, Tasks, Notes, Podcasts, Scanner), its page
+  in the installer links to the desktop version on GitHub.
 * Everything Obtainium does is still there: any other app can be added from its GitHub, GitLab,
   Codeberg, F-Droid… page, with the same options.
 * Updates in the background; silent on Android 12 and later for the apps this installer installed
@@ -67,6 +69,9 @@ index file with no such limit.
    to `OTHERS` in `tool/make_catalog.py`.
 3. Run `tool/make_catalog.py`, commit `assets/catalog.json`, push. Installers already on phones
    read the new list at their next start (GitHub serves the previous one for up to five minutes).
+
+A card of the apps page with a desktop download button ("Windows, macOS, Linux") also gives the
+app its desktop link in the list (`desktop` in `assets/catalog.json`); nothing else to do.
 
 The script refuses an app that is missing from the repository. The only exception is an app that
 cannot be in the repository because of its size (Clavier Plume, 226 MB): it carries a `github`

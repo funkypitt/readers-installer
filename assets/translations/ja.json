@@ -512,5 +512,7 @@
     "yes": "はい",
     "yesMarkUpdated": "はい、アップデート済みとしてマークします",
     "youPickedTrackOnly": "「追跡のみ」を選択しています",
-    "zippedApkFilterRegEx": "ZIP内のAPKをフィルタリングする"
+    "zippedApkFilterRegEx": "ZIP内のAPKをフィルタリングする",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

@@ -512,5 +512,7 @@
     "yes": "بله",
     "yesMarkUpdated": "بله، علامت گذاری به عنوان به روز شده",
     "youPickedTrackOnly": "شما گزینه ی «فقط ردیابی» را انتخاب کرده اید",
-    "zippedApkFilterRegEx": "فیلتر APK در داخل Zip"
+    "zippedApkFilterRegEx": "فیلتر APK در داخل Zip",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }

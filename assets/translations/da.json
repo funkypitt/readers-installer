@@ -512,5 +512,7 @@
     "yes": "Ja",
     "yesMarkUpdated": "Ja, markér som opdateret",
     "youPickedTrackOnly": "Du har valgt 'Følg Kun'-indstillingen.",
-    "zippedApkFilterRegEx": "Filtrer APK'er inde i ZIP"
+    "zippedApkFilterRegEx": "Filtrer APK'er inde i ZIP",
+    "alsoOnDesktop": "Also on the desktop:",
+    "alsoOnDesktopFor": "Also on the desktop ({}):"
 }
