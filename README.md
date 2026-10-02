@@ -13,6 +13,9 @@ Obtainium and is not endorsed by its authors. Modified from Obtainium v1.6.17 on
 * The list of Reader's apps ships with the installer and is read again from this repository at
   each start (`assets/catalog.json`), so an app published later appears by itself. An app you
   remove from the list is not added back.
+* Four other apps by the same author follow the family in the list: ePub Magazine Reader, Le
+  dictionnaire Littré, Funky's 2P Games and Clavier Plume. Clavier Plume, too large for the
+  F-Droid repository, is the only one read from its GitHub releases.
 * The Reader's apps and the installer itself are read from one small index file of the F-Droid
   repository, not from GitHub's API, whose anonymous limit of 60 requests an hour a family of
   sixteen apps exhausts at once ("too many requests").

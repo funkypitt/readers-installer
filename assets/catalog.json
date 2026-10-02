@@ -135,6 +135,36 @@
    "name": "Reader's Night Filter",
    "overrideSource": "FDroidRepo",
    "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersnight\"}"
+  },
+  {
+   "id": "com.freedomfighter.magazinereader",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.magazinereader",
+   "author": "funkypitt",
+   "name": "ePub Magazine Reader",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.magazinereader\"}"
+  },
+  {
+   "id": "ch.littre.littre_app",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=ch.littre.littre_app",
+   "author": "funkypitt",
+   "name": "Le dictionnaire Littré",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"ch.littre.littre_app\"}"
+  },
+  {
+   "id": "ch.plume.clavier",
+   "url": "https://github.com/funkypitt/clavier-plume",
+   "author": "funkypitt",
+   "name": "Clavier Plume"
+  },
+  {
+   "id": "com.local2p.games",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.local2p.games",
+   "author": "funkypitt",
+   "name": "Funky's 2P Games",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.local2p.games\"}"
   }
  ]
 }
