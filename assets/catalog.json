@@ -129,6 +129,14 @@
    "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersfiles\"}"
   },
   {
+   "id": "com.freedomfighter.readersphone",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersphone",
+   "author": "funkypitt",
+   "name": "Reader's Phone",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersphone\"}"
+  },
+  {
    "id": "com.freedomfighter.readersnight",
    "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersnight",
    "author": "funkypitt",
