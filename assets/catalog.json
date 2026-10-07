@@ -195,6 +195,10 @@
   "com.freedomfighter.readersscanner": {
    "url": "https://github.com/funkypitt/readers-scanner-desktop",
    "systems": "Windows, macOS, Linux"
+  },
+  "com.freedomfighter.readersnight": {
+   "url": "https://github.com/funkypitt/readers-night-desktop",
+   "systems": "Linux, browser"
   }
  }
 }
