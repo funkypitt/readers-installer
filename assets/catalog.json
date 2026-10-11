@@ -145,6 +145,14 @@
    "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersnight\"}"
   },
   {
+   "id": "com.freedomfighter.readersattention",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersattention",
+   "author": "funkypitt",
+   "name": "Reader's Attention",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersattention\"}"
+  },
+  {
    "id": "com.freedomfighter.magazinereader",
    "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.magazinereader",
    "author": "funkypitt",
@@ -186,6 +194,10 @@
   },
   "com.freedomfighter.readersnotes": {
    "url": "https://github.com/funkypitt/readers-notes-desktop",
+   "systems": "Windows, macOS, Linux"
+  },
+  "com.freedomfighter.readersbooks": {
+   "url": "https://github.com/funkypitt/readers-books-desktop",
    "systems": "Windows, macOS, Linux"
   },
   "com.freedomfighter.readerspodcasts": {
