@@ -153,6 +153,14 @@
    "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersattention\"}"
   },
   {
+   "id": "com.freedomfighter.readersmotivation",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.readersmotivation",
+   "author": "funkypitt",
+   "name": "Reader's Motivation",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.readersmotivation\"}"
+  },
+  {
    "id": "com.freedomfighter.magazinereader",
    "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.magazinereader",
    "author": "funkypitt",
