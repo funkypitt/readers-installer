@@ -189,6 +189,14 @@
    "name": "Funky's 2P Games",
    "overrideSource": "FDroidRepo",
    "additionalSettings": "{\"appIdOrName\": \"com.local2p.games\"}"
+  },
+  {
+   "id": "com.freedomfighter.swissbikehike",
+   "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.swissbikehike",
+   "author": "funkypitt",
+   "name": "Swiss Bike-Hike Map",
+   "overrideSource": "FDroidRepo",
+   "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.swissbikehike\"}"
   }
  ],
  "desktop": {
