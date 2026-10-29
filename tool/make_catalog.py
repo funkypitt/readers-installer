@@ -46,7 +46,7 @@ OTHERS = [
     # 226 MB: too large for the F-Droid repository, the one exception to the rule
     {"id": "ch.plume.clavier", "name": "Clavier Plume", "github": "funkypitt/clavier-plume"},
     {"id": "com.local2p.games", "name": "Funky's 2P Games"},
-    {"id": "com.freedomfighter.swissbikehike", "name": "Swiss Bike-Hike Map"},
+    {"id": "com.freedomfighter.swissbikehike", "name": "Swiss Bikers and Pedestrians Map"},
 ]
 
 

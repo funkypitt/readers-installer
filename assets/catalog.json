@@ -194,7 +194,7 @@
    "id": "com.freedomfighter.swissbikehike",
    "url": "https://funkypitt.github.io/fdroid-repo/repo?appId=com.freedomfighter.swissbikehike",
    "author": "funkypitt",
-   "name": "Swiss Bike-Hike Map",
+   "name": "Swiss Bikers and Pedestrians Map",
    "overrideSource": "FDroidRepo",
    "additionalSettings": "{\"appIdOrName\": \"com.freedomfighter.swissbikehike\"}"
   }
